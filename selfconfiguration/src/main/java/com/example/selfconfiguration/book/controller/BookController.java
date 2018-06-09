@@ -15,7 +15,7 @@ public class BookController {
 
     @RequestMapping("/bookInfo")
     @ResponseBody
-    public String show(){
+    public String show() {
         return author + ": " + name;
     }
 }
