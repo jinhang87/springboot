@@ -16,7 +16,7 @@ public class UserController {
     private UserReposity userReposity;
 
     @RequestMapping(method = RequestMethod.POST)
-    public User add(){
+    public User add() {
         User user = new User();
         user.setUserId(1l);
         user.setUserName("ceshi");
@@ -25,7 +25,7 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<User> show(){
+    public List<User> show() {
         return userReposity.findAll();
     }
 }
