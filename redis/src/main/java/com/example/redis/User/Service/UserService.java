@@ -17,6 +17,7 @@ public class UserService {
 
     @Cacheable
     public List<UserDomain> list() {
+        System.out.println("无缓存的时候调用这里 list()");
         return userJpa.findAll();
     }
 
