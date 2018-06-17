@@ -16,3 +16,5 @@ C:\Program\kafka_2.11-1.1.0>.\bin\windows\kafka-server-start.bat .\config\server
 
 
 - 运行Java
+
+- 打开浏览器 http://localhost:8080/TopicOne/send 测试
