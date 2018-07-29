@@ -1,7 +1,5 @@
 package com.example.springbootaop.aop;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -9,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import java.lang.reflect.Array;
+import javax.servlet.http.HttpServletRequest;
 
 @Aspect
 @Component
@@ -26,7 +24,7 @@ public class LogAspect {
         // 记录下请求内容
         System.out.println("URL : " + request.getRequestURL().toString());
         System.out.println("HTTP_METHOD : " + request.getMethod());
-        System.out.println("IP : " + request.getRemoteAddr());
+        System.out.println("IP: " + request.getRemoteAddr());
         System.out.println("CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         //System.out.println("ARGS : " + .toString(joinPoint.getArgs()));
     }
