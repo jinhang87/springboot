@@ -3,8 +3,10 @@ package com.example.sqlite.User.Entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="t_user")
 public class User {
 
     public Long getUserId() {
