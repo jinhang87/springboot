@@ -19,7 +19,7 @@ public class UserController {
     private UserReposity userReposity;
 
     @RequestMapping(method = RequestMethod.GET)
-    public Page<User> show(@RequestParam(value = "page", defaultValue = "1") int page,
+    public Page<User> show(@RequestParam(value = "page", defaultValue = "0") int page,
                            @RequestParam(value = "size", defaultValue = "10") int pageSize){
         return userReposity.findAll(new PageRequest(page,pageSize, Sort.Direction.ASC, "userId"));
     }
