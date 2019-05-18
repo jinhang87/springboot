@@ -6,12 +6,12 @@ import javax.persistence.*;
 @Table(name = "t_user")
 public class User {
 
-    public long getUserId() {
-        return userId;
+    public long getId() {
+        return id;
     }
 
-    public void setUserId(long userId) {
-        this.userId = userId;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -41,7 +41,7 @@ public class User {
     @Id
     @GeneratedValue
     @Column(name = "user_id")
-    private long userId;
+    private long id;
 
     @Column(name = "user_name")
     private String userName;
