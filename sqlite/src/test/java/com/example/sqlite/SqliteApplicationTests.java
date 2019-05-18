@@ -23,7 +23,6 @@ public class SqliteApplicationTests {
 	@Test
 	public void test() throws Exception{
 		User user = new User();
-		user.setUserId(1L);
 		user.setUserName("sdf");
 		userReposity.save(user);
 	}
