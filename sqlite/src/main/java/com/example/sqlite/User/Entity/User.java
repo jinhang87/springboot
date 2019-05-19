@@ -6,6 +6,23 @@ import javax.persistence.*;
 @Table(name = "t_user")
 public class User {
 
+    @Id
+    @GeneratedValue
+    @Column(name = "user_id")
+    private long id;
+
+    @Column(name = "user_name")
+    private String userName;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "age")
+    private int age;
+
+    @Column(name = "url")
+    private String url;
+
     public long getId() {
         return id;
     }
@@ -38,18 +55,13 @@ public class User {
         this.age = age;
     }
 
-    @Id
-    @GeneratedValue
-    @Column(name = "user_id")
-    private long id;
+    public String getUrl() {
+        return url;
+    }
 
-    @Column(name = "user_name")
-    private String userName;
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
 
-    @Column(name = "password")
-    private String password;
-
-    @Column(name = "age")
-    private int age;
 }

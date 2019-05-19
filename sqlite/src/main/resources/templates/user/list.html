@@ -17,6 +17,7 @@
             <th>User Name</th>
             <th>Password</th>
             <th>Age</th>
+            <th>Url</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -27,6 +28,7 @@
             <td th:text="${user.userName}">neo</td>
             <td th:text="${user.password}">Otto</td>
             <td th:text="${user.age}">6</td>
+            <td height="200" align="center" valign="bottom"><img height="200" width="200" th:src="@{${user.url}}"></td>
             <td><a th:href="@{/toEdit(id=${user.id})}">edit</a></td>
             <td><a th:href="@{/delete(id=${user.id})}">delete</a></td>
         </tr>
